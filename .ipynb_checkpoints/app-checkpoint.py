@@ -34,6 +34,11 @@ class Correls(Resource):
 		
 		from correl_pkg.main import get_correl
 		
+		# try:
+			# w_ = args['correl_window']
+			# data = get_correl(w_)
+		# except:
+			# data = get_correl()
 		w_ = int(args['correl_window'])
 		data = get_correl(w_)
 		data.to_csv('var_correlations.csv')
